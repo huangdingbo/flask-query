@@ -51,7 +51,7 @@ app.config["FLASK_QUERY_CONFIG"] = {
 data = Query().table("Course as c").leftJoin("Teacher as t", on="c.TID=t.TID").select(["t.*,c.*"]).where({"c.id": 1}).all()
 ```
 
-### 2、插入(insert)
+#### 2、插入(insert)
 ```python
 
 data = {"id": 20, "TSID": "22", "SID": "3", "CID": "2", "score": "2"}
@@ -59,7 +59,7 @@ data = {"id": 20, "TSID": "22", "SID": "3", "CID": "2", "score": "2"}
 Query().createCommand().insert(table="SC", data=data).execute()
 ```
 
-### 3、批量插入(bathInsert)
+#### 3、批量插入(bathInsert)
 ```python
 
     data = [
@@ -72,7 +72,7 @@ Query().createCommand().insert(table="SC", data=data).execute()
     Query().createCommand().bathInsert(table="SC", data=data).execute()
 ```
 
-### 4、更新(update)
+#### 4、更新(update)
 ```python
 
 # 传入条件
@@ -83,13 +83,13 @@ Query().createCommand().update(table="SC", data=data,where=Query().where([">=", 
 
 ```
 
-### 5、更新或者插入(upsert)
+#### 5、更新或者插入(upsert)
 ```python
 
 Query().upsert(table="SC", data=data, ignore=False, primary_key="id").execute()
 ```
 
-### 6、删除(delete)
+#### 6、删除(delete)
 ```python
 Query().createCommand().delete(table='SC', where={"id": 1}).execute()
 ```
