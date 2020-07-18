@@ -10,10 +10,10 @@ pip install Flask-Query
 #### 1、pymysql方式
 ```python
 app.config["FLASK_QUERY_CONFIG"] = {
-    "host": "114.115.165.68",
+    "host": "127.0.0.1",
     "port": "3306",
     "user": "root",
-    "password": "FRuGckhYFZ6KpWUV",
+    "password": "123456",
     "database": "school",
     "charset": "utf8",
 }
@@ -35,10 +35,10 @@ app.config["FLASK_QUERY_CONFIG"] = {
      ping=0,
      # ping MySQL服务端，检查是否服务可用。# 如：0 = None = never, 1 = default = whenever it is requested, 2 = when a cursor is
      # created, 4 = when a query is executed, 7 = always
-     host='114.115.165.68',
+     host='127.0.0.1',
      port=3306,
      user='root',
-     password='FRuGckhYFZ6KpWUV',
+     password='123456',
      database='school',  # 链接的数据库的名字
      charset='utf8'
  )
