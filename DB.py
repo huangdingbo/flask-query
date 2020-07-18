@@ -1,7 +1,6 @@
 from flask import current_app
 from MysqlDB import MysqlDB
 from DBUtils.PooledDB import PooledDB
-
 from PoolDB import PoolDB
 
 
